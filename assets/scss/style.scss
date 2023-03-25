@@ -1,0 +1,96 @@
+@import "_fonts.scss";
+
+.calculator {
+  height: 100%;
+  width: 300px;
+  border-radius: 50px;
+  box-shadow: 0px 3px 6px 0px rgba(253, 253, 253, 0.15),
+    0px 2px 4px 0px rgba(247, 4, 4, 0.12);
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  margin-block-start: 2em;
+  max-inline-size: 22rem;
+  overflow: hidden;
+  font-family: SemiBold;
+  font-weight: 200;
+  color: hsl(202, 11%, 29%);
+  .calculator__output {
+    word-wrap: break-word;
+    min-height: 200px;
+    min-width: 300px;
+    color: orange;
+    font-size: 4rem;
+    background-color: black;
+    padding-block-start: 2rem;
+    padding-inline-end: 1.25rem;
+    text-align: end;
+  }
+  .calculator__keys {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+    background: black;
+    .clear-button {
+      background: hsl(0, 20%, 99%);
+      color: hsl(0, 98%, 49%);
+      border: none;
+      font-size: 2rem;
+      inline-size: 60px;
+      block-size: 60px;
+      border-radius: 40px;
+      margin: 0.25rem;
+      font-family: Light;
+    }
+  }
+}
+
+.calculator__key {
+  background: orange;
+  color: hsl(255, 100%, 100%);
+  border: none;
+  font-size: 2rem;
+  inline-size: 60px;
+  block-size: 60px;
+  border-radius: 40px;
+  margin: 0.25rem;
+  font-family: Light;
+}
+.calculator__key:active,
+.calculator__key:focus {
+  box-shadow: 0 0 8px 0 rgba(3, 255, 251, 0.3) inset;
+  outline: none;
+}
+.calculator__key--operator {
+  background: hsl(210, 12%, 97%);
+  color: hsl(0, 0%, 3%);
+  border: none;
+  font-size: 2rem;
+  inline-size: 60px;
+  block-size: 60px;
+  border-radius: 40px;
+  margin: 0.25rem;
+  font-family: Light;
+}
+.calculator__key--operator:active,
+.calculator__key--operator:focus {
+  background-color: rgb(121, 114, 114);
+  box-shadow: 0 0 8px 0 rgba(9, 9, 9, 0.989) inset;
+  outline: none;
+}
+.calculator__key--enter {
+  grid-column: 4 / 5;
+  grid-row: 2 / span 4;
+  background-color: rgb(255, 196, 88);
+  height: auto;
+  color: hsl(255, 100%, 100%);
+  border-radius: 40px;
+  font-family: Light;
+  font-size: 2rem;
+}
+
+.calculator__key--enter:active,
+.calculator__key--enter:focus {
+  box-shadow: 0 0 8px 0 rgb(254, 3, 3) inset;
+  outline: none;
+}
